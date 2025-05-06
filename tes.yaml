@@ -1,0 +1,15 @@
+services:
+  - type: worker
+    name: brute-force-bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: TELEGRAM_CHAT_ID
+        sync: false
+      - key: BTC658_USERNAME
+        sync: false
+      - key: BTC658_PASSWORD
+        sync: false
